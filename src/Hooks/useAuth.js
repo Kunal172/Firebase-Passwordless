@@ -24,7 +24,7 @@ export const AuthProvider = ({children}) => {
 
     const sendSignInLinkToEmail = email => {
         return firebase.auth().sendSignInLinkToEmail(email, {
-                url: 'http://localhost:3000/confirm',
+                url: 'https://firebase-passwordless.netlify.app/confirmconfirm',
                 handleCodeInApp: true,
         }).then(()=>{
             return true;
